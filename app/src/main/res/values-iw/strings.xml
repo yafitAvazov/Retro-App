@@ -1,0 +1,15 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <string name="title_clothes_size">מידת בגדים:</string>
+    <string name="title_shoes_sizes">מידת נעליים:</string>
+    <string name="price">"מחיר: "</string>
+    <string name="delete_alart">האם אתה בטוח שאתה רוצה להסיר את הפריט הזה?</string>
+    <string name="cancel_btn">בטל</string>
+    <string name="remove_btn">הסר</string>
+    <string name="apply_btn">החל</string>
+    <string name="order_by_title">סנן לפי...</string>
+    <string name="checkout_title">סיכום הזמנה</string>
+    <string name="total_sum">לתשלום</string>
+    <string name="total_purchase">תודה על קנייתך!</string>
+    <string name="get_order_btn">הזמן</string>
+</resources>

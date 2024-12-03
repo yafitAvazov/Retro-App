@@ -1,0 +1,237 @@
+<androidx.drawerlayout.widget.DrawerLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:id="@+id/drawer_layout"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent">
+
+
+
+    <LinearLayout
+        android:id="@+id/layout"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:orientation="vertical"
+        android:padding="20dp">
+
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="20dp"
+            android:orientation="horizontal"
+            android:padding="8dp">
+
+            <ImageView
+                android:id="@+id/shopping_icon"
+                android:layout_width="30dp"
+                android:layout_height="30dp"
+                android:contentDescription="Shopping Cart Icon"
+                android:src="@drawable/baseline_shopping_cart_24" />
+
+            <View
+                android:layout_width="0dp"
+                android:layout_height="0dp"
+                android:layout_weight="1" />
+
+            <Switch
+                android:id="@+id/theme_switch"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content" />
+
+            <ImageView
+                android:id="@+id/light_icon"
+                android:layout_width="30dp"
+                android:layout_height="30dp"
+                android:contentDescription="Light Icon"
+                android:src="@drawable/baseline_light_mode_24" />
+        </LinearLayout>
+
+        <!-- לוגו -->
+        <ImageView
+            android:layout_width="250dp"
+            android:layout_height="120dp"
+            android:layout_gravity="center"
+            android:adjustViewBounds="true"
+            android:layout_marginTop="-15dp"
+            android:scaleType="fitXY"
+            android:src="@drawable/logo" />
+
+        <!-- אייקון לסינון -->
+        <ImageView
+            android:id="@+id/filter"
+            android:layout_width="40dp"
+            android:layout_height="40dp"
+            android:layout_gravity="end"
+            android:layout_marginTop="-15dp"
+            android:contentDescription="Filter Icon"
+            android:src="@drawable/baseline_filter_list_24" />
+
+        <!-- גלרייה -->
+        <GridView
+            android:id="@+id/gridView"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:gravity="center"
+            android:layout_marginTop="-15dp"
+            android:horizontalSpacing="10dp"
+            android:numColumns="1"
+
+            android:stretchMode="columnWidth"
+            android:verticalSpacing="10dp" />
+    </LinearLayout>
+
+    <LinearLayout
+        android:id="@+id/order_by_menu"
+        android:layout_width="300dp"
+        android:layout_height="match_parent"
+        android:layout_gravity="end"
+        android:orientation="vertical"
+        android:padding="16dp"
+
+        android:background="@android:color/white">
+
+        <TextView
+            android:id="@+id/orderBy"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:gravity="center"
+            android:text="@string/order_by_title"
+            android:textSize="22sp"
+            android:layout_marginTop="70dp"
+
+            android:layout_marginBottom="16dp" />
+
+        <!-- מחיר -->
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:gravity="center"
+            android:text="@string/price"
+            android:background="@color/light_gray"
+            android:textSize="19sp"
+            android:layout_marginBottom="16dp" />
+
+        <RelativeLayout
+            xmlns:android="http://schemas.android.com/apk/res/android"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:padding="8dp">
+
+            <!-- טקסט להצגת טווח המחירים -->
+            <TextView
+                android:id="@+id/minPrice"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="$0"
+                android:textSize="16sp"
+                android:layout_alignParentStart="true"
+                android:layout_alignParentLeft="true"
+                android:layout_marginBottom="8dp" />
+            <TextView
+                android:id="@+id/maxPrice"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text= "$150"
+                android:textSize="16sp"
+                android:layout_alignParentEnd="true"
+                android:layout_alignParentRight="true"
+                android:layout_marginBottom="8dp" />
+            <SeekBar
+                android:id="@+id/priceSeekBar"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_below="@id/minPrice"
+                android:max="150"
+                android:progress="0" />
+        </RelativeLayout>
+
+
+        <!-- מידות בגדים -->
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:gravity="center"
+            android:text="@string/title_clothes_size"
+            android:background="@color/light_gray"
+            android:textSize="19sp"
+            android:layout_marginTop="30dp"
+            android:layout_marginBottom="16dp" />
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal"
+            android:gravity="center">
+
+            <CheckBox
+                android:id="@+id/checkbox_s"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="S" />
+            <CheckBox
+                android:id="@+id/checkbox_m"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="M" />
+            <CheckBox
+                android:id="@+id/checkbox_l"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="L" />
+        </LinearLayout>
+
+        <!-- מידות נעליים -->
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:gravity="center"
+            android:text="@string/title_shoes_sizes"
+            android:background="@color/light_gray"
+            android:textSize="19sp"
+            android:layout_marginTop="30dp"
+            android:layout_marginBottom="16dp" />
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal"
+            android:gravity="center">
+
+            <CheckBox
+                android:id="@+id/checkbox_36"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="36" />
+            <CheckBox
+                android:id="@+id/checkbox_37"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="37" />
+            <CheckBox
+                android:id="@+id/checkbox_38"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="38" />
+            <CheckBox
+                android:id="@+id/checkbox_39"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="39" />
+            <CheckBox
+                android:id="@+id/checkbox_40"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="40" />
+
+        </LinearLayout>
+        <Button
+            android:id="@+id/apply_button"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center"
+            app:cornerRadius="100dp"
+            app:backgroundTint="@color/gray"
+            android:textColor="@color/white"
+            android:text="@string/apply_btn"/>
+    </LinearLayout>
+</androidx.drawerlayout.widget.DrawerLayout>

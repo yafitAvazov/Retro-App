@@ -1,0 +1,22 @@
+<?xml version="1.0" encoding="utf-8"?>
+<selector xmlns:android="http://schemas.android.com/apk/res/android">
+    <item android:state_focused="true"
+        android:drawable="@drawable/rounded_button"/>
+    <item android:state_focused="false">
+    <shape
+        android:shape="rectangle">
+        <gradient android:endColor="@color/black"
+            android:startColor="@color/black"
+            android:angle="-90"/>
+        <stroke android:color="@color/white"
+            android:width="2dp"/>
+        <corners android:radius="80dp" />
+        <padding
+            android:left="16dp"
+            android:top="8dp"
+            android:right="16dp"
+            android:bottom="8dp" />
+    </shape>
+</item>
+
+</selector>

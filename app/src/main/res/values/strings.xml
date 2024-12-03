@@ -1,0 +1,16 @@
+<resources>
+    <string name="title_clothes_size">Clothes size:</string>
+    <string name="title_shoes_sizes">Shoes Sizes:</string>
+    <string name="price">Price:</string>
+    <string name="none">None</string>
+    <string name="delete_alart">Are you sure you want to remove this item?</string>
+    <string name="cancel_btn">cancel</string>
+    <string name="remove_btn">Remove</string>
+    <string name="order_by_title">ORDER BY...</string>
+    <string name="total_sum">Total: </string>
+    <string name="total_purchase">Thank you for your purchase!</string>
+    <string name="apply_btn">APPLY</string>
+    <string name="checkout_title">CHECKOUT</string>
+    <string name="get_order_btn">Get Order</string>
+</resources>
+
